@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Style/Login.css" />
+    <link rel="stylesheet" type="text/css" href="Style/font-awesome.css" />
+</head>
+<body>
+    <div class="container">
+        <img src="Img/men.png" />
+        <form>
+            <div class="form-input">
+                <input type="text" name="username" placeholder="Enter username"/>
+
+            </div>
+            <div class="form-input">
+                <input type="password" name="password" placeholder="Enter password" />
+            </div>
+            <div >
+                <input type="submit" name="submit" value="LOGIN" class="btn-login" onclick="check(this.form)" />
+            </div>
+            <a href="#">Forget Password?</a>
+        </form>
+
+    </div>
+</body>
+
+
+
+</html>
+
+<script language="javascript">
+    function check(form)
+    {
+        if (form.username.value == "learn" && form.password.value == "1") {
+            window.open('https://www.youtube.com/watch?v=muZ0JYBCnrU')
+        } else {
+            alert("The username and password you entered are incorrect")
+        }
+    }
+</script>
+
+
