@@ -1,0 +1,48 @@
+p{
+    text-align: center;
+    font-size: 50px;
+}
+
+.one{
+    position: absolute;
+    top: 0; left: 0; right:50%; bottom: 50%;
+    background: url("Img/slider1.png");
+    background-size: cover;
+}
+
+.two{
+    position: absolute;
+    top: 0; left: 50%; right: 0; bottom: 50%;
+    background: url("Img/slider1.png");
+    background-size: cover;
+}
+.three{
+    position: absolute;
+    top: 50%; left: 0; right:50%; bottom: 0;
+    background: url("Img/slider1.png");
+    background-size: cover;
+    
+}
+.four{
+    position: absolute;
+    top: 50%; left: 50%; right: 0; bottom: 0;
+    background: url("Img/slider1.png");
+    background-size: cover;    
+}
+
+.one:hover{
+    background: linear-gradient( rgba(0, 0, 0 ,0.5), rgba(0,0,0,0.5)), url('Img/slider1.png');
+    background-size: cover;
+}
+.two:hover{
+    background: linear-gradient( rgba(0, 0, 0 ,0.5), rgba(0,0,0,0.5)), url('Img/slider2.png');
+    background-size: cover;
+}
+.three:hover{
+    background: linear-gradient( rgba(0, 0, 0 ,0.5), rgba(0,0,0,0.5)), url('Img/slider3.png');
+    background-size: cover;
+}
+.four:hover{
+    background: linear-gradient( rgba(0, 0, 0 ,0.5), rgba(0,0,0,0.5)), url('Img/slider4.png');
+    background-size: cover;
+}
