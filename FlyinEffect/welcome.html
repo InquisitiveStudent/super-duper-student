@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <ul class="fly-in-text hidden">
+        <li>W</li>
+        <li>E</li>
+        <li>L</li>
+        <li>C</li>
+        <li>O</li>
+        <li>M</li>
+        <li>E</li>
+        <br>
+        <li>s</li>
+        <li>t</li>
+        <li>a</li>
+        <li>r</li>
+        <li>h</li>
+        <li>u</li>
+        <li>b</li>
+        <li>b</li>
+        <li>e</li>
+        <li>r</li>
+    </ul>
+    <script src="Script/JQuery-lib/jquery-3.2.1.js"></script>
+    <script>
+        $(function() {
+            //flying effect timer
+            setTimeout(function() {
+                $('.fly-in-text').removeClass('hidden');
+            }, 500);
+            //redirect timer
+            /*   
+            window.setTimeout(function() {
+                    window.location.replace('http://www.google.com');
+                }, 5000);
+            */
+        })();
+
+    </script>
+</body>
+
+</html>
