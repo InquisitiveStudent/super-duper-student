@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting using PHP</title>
+    <script src="asset/js/jquery-3.2.1.min.js"></script>
+    <script src="asset/js/jquery-ui.min.js"></script>
+    <script src="asset/js/custom.js"></script>
+    <link rel="stylesheet" href="asset/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+
+<body>
+
+    <div id="wrap">
+        <div id="sortMe">
+              <?php
+      $item=array(
+        '<div id="item_0">text 0</div>',
+        '<div id="item_1">text 1</div>',
+        '<div id="item_2">text 2</div>',
+        '<div id="item_3">text 3</div>',
+        '<div id="item_4">text 4</div>'
+      );
+       include 'dbh.php';
+       $result=mysqli_query($conn,'SELECT data from sortGrid');
+       if(!$row= mysqli_fetch_assoc($result)){
+        echo "Invalid SQL statement!";   
+        }else{
+           $order=mysqli_fetch_row($result);
+           $order=explode(',' , $order[0]);
+            foreach($order as $key =>$value){
+            echo $item[$value];
+            }
+        }
+   ?>
+            
+        </div>
+    </div>
+    <script src=""></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+#sortMe {
+    font-family: "Arial", sans-serif;
+    padding: 10px;
+    border: 1px solid black;
+    height: 500px;
+}
+
+#sortMe>div:nth-child(1) {
+    padding: 30px;
+    background-color: antiquewhite;
+    height: 400px;
+    width: 10%;
+    float: left;
+}
+
+#sortMe>div:nth-child(2) {
+    background-color: cadetblue;
+    padding: 30px;
+    height: 400px;
+    width: 10%;
+    float: left;
+}
+
+#sortMe>div:nth-child(3) {
+    background-color: lawngreen;
+    padding: 30px;
+    width: 10%;
+    float: left;
+    height: 400px;
+}
+
+#sortMe>div:nth-child(4) {
+    background-color: yellowgreen;
+    padding: 30px;
+    width: 10%;
+    float: left;
+    height: 400px;
+}
+
+#sortMe>div:nth-child(5) {
+    background-color: rebeccapurple;
+    padding: 30px;
+    width: 10%;
+    float: left;
+    height: 400px;
+}
