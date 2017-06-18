@@ -1,0 +1,110 @@
+
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <title> Jquery slides</title>
+        <script type="text/javascript" src="Script/JQuery-lib/jquery-3.2.1.slim.min.js"></script>
+        <script type="text/javascript" src="Script/JQuery-lib/jquery-3.2.1.js"></script>
+        <script type="text/javascript" src="jquery.cycle.all.js"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                
+                $(function(){
+                   $('#play').click(function(){             $('#slider').cycle('resume'); return false;}                           
+                );
+                });
+                
+                $(function(){
+                   $('#pause').click(function(){             $('#slider').cycle('pause'); return false;}         )
+                });
+                
+                document.onkeydown = function (event) {
+                    var key_code = event.keyCode;
+                    if (key_code === 37) {
+                        $("#slider").cycle("prev");
+                    }
+                    if (key_code === 39) {
+                        $("#slider").cycle("next");
+                    }
+                }
+            //using arrow keys to navigate the slides
+            
+            
+           $('#slider').cycle({
+               fx:       'scrollHorz',
+               next:    '#next',
+               prev:    '#prev',
+               pager:   '#pager',
+               //by right, the navigations should be working but for unknown reasons the image will not move. Possible problem would be library incompatibility. 
+               timeout:  1000       ,
+               speed:   500     ,
+               pause:   1
+               //mousein the image will pause the image
+               
+           });
+            
+            });
+            
+        </script>
+        
+    </head>
+    <body>
+        <div id="hero">
+            
+                <div id="pager"></div>
+                <div id="pause" class="action">&asymp;</div>
+                <div id="play"  class="action">&Delta;</div>
+                <div id="next" class="action">&rang;</div>
+                <div id="prev" class="action">&lang;</div>
+            
+            
+            <div id="slider"> 
+                <div class="items">
+                    <img src="Img/01-fall-autumn.jpg">
+                    <div class="info">
+                        <h2>The Fall Autumn</h2>
+                        <p>This is the moment that lovers wish freeze in time. <a href="https://www.youtube.com">Learn More</a></p>
+                    </div><!--End of info-->
+                </div><!--End of items-->
+                <div class="items">
+                    <img src="Img/02-pexels.jpg">
+                    <div class="info">
+                        <h2>The Petals</h2>
+                        <p>Leaves freezes in time. <a href="https://www.youtube.com">Learn More</a></p>
+                    </div><!--End of info-->
+                </div><!--End of items-->
+                <div class="items">
+                    <img src="Img/03-pink-flowers.jpg">
+                    <div class="info">
+                        <h2>The Flowers</h2>
+                        <p>This is the moment that lovers wish freeze in time. <a href="https://www.youtube.com">Learn More</a></p>
+                    </div><!--End of info-->
+                </div><!--End of items-->
+                <div class="items">
+                    <img src="Img/04-marguerite-daisy.jpg">
+                    <div class="info">
+                        <h2>The Daisy</h2>
+                        <p>This is the moment that lovers wish freeze in time. <a href="https://www.youtube.com">Learn More</a></p>
+                    </div><!--End of info-->
+                </div><!--End of items-->
+                <div class="items">
+                    <img src="Img/05-blossom.jpg">
+                    <div class="info">
+                        <h2>The blossoms</h2>
+                        <p>This is the moment that lovers wish freeze in time. <a href="https://www.youtube.com">Learn More</a></p>
+                    </div><!--End of info-->
+                </div><!--End of items-->
+            </div>
+            <!-- End of slider-->        
+        </div>
+        
+
+        <div class="video">
+             <a href="https://www.youtube.com/watch?v=0iP8YwTo7To&t=1485s">Video</a>
+        </div>
+        
+    </body>
+</html>

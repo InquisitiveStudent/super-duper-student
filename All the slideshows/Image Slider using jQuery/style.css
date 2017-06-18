@@ -1,0 +1,126 @@
+#hero{
+    width: 960px;
+    height: 500px;
+    display: block;
+    position: relative;
+    margin: auto;
+}
+
+#slider{
+    width: 960px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    overflow: hidden;
+}
+img{
+    height: 500px;
+    width: 960px;
+}
+
+.info{
+    width: 960px;
+    height 80px;
+    display: block;
+    /*
+    block will display info in the following manner
+    This is a paragraph
+    This is a paragraph
+    This is a paragraph
+    */
+    /* info is the child of the slider has the position of absolute*/
+    position: relative; 
+    bottom: 90px;
+    background: rgb(80, 103, 103);
+    z-index: 99;
+    opacity: 0.9;
+    
+}
+
+.info h2{
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color : #6a4444;
+    padding: 15px 0 0 20px;
+}
+
+.info p{
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color : #6a4444;
+    padding: 0 0 0 20px;
+    
+    
+}
+.action{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display: block;
+    position: absolute;
+    background: rgb(106, 123, 89);
+    color: #FFF;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0.9;
+}
+
+#play{
+    top: 0;
+    right: 44;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    
+}
+#pause{
+     top: 0;
+    right: 88px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+}
+#next{
+    top: 0;
+    right: 0;
+}
+#prev{ 
+    top: 0;
+    right: 133;
+}
+
+#pager{
+    width:100%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+}
+/*child for #pager  and the child will display inline*/
+#pager a{
+    font-size: .0em;
+    color: transparent;
+    width:10px;
+    height: 10px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #FFF;
+    border-radius:20px;
+    background: transparent;
+    margin: 10px;
+    
+}
+.video{
+    margin: 20px;
+    border: 1px solid gray;
+    text-align: center;
+    font-size: 16px;
+    padding: 10px 0px 5px 0;
+    background: #bf6e1e;
+    
+}
+#pager a.activeSlide{
+    background: #ddcaca;
+}

@@ -1,0 +1,75 @@
+<!DOCtype html>
+<html lang="en">
+    <head>
+        <title> CSS slider</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0">
+        
+        <link rel="stylesheet" href="./picture.css"/>
+        
+        
+    </head>
+    
+    <body>
+        <header>
+            <div id="container">
+                <img class="slides" src="Img/slider1.png"/>
+                <img class="slides" src="Img/slider2.png"/>
+                <img class="slides" src="Img/slider3.png"/>
+                <img class="slides" src="Img/slider4.png"/>
+                <img class="slides" src="Img/slider5.png"/>
+
+                <button onclick="plusIndex(-1)" class="button_1" id="btn_left"> &#10094;</button>
+                <button onclick="plusIndex(1)" class="button_right" id="btn_right"> &#10095;</button>
+            </div>
+        </header>
+        <section>
+            <div class="text">
+            Loreum sandfj slei dklsm shgsa sdkjgs.
+            </div> 
+        </section>
+        <script>
+            var index=1;
+            
+            function plusIndex(n){
+                index=index+n;
+                showImage(index);
+            }
+            function showImage(n){
+                var i;
+                var x=document.getElementsByClassName("slides");
+                if(n>x.length){ index=1;}
+                if(n<1) { index=x.length; }
+                for(i=0;i<x.length;i++){
+                    x[i].style.display='none';
+                }
+                x[index-1].style.display='block';
+
+            }
+            autoSlide();
+            function autoSlide(){
+                var i;
+                var x=document.getElementsByClassName("slides");
+                
+                for(i=0;i<x.length;i++){
+                    x[i].style.display='none';
+                }
+                if(index>x.length){ index=1;}
+                x[index-1].style.display='block';
+                index++;
+                setTimeout(autoSlide,5000);
+            }
+            
+            
+            
+        </script>
+    </body>
+    
+    <footer>
+        <p>Chin. Copyright &copy; 2017</p>
+    </footer>
+    
+    
+    
+    
+</html>
